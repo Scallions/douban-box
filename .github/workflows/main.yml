@@ -26,7 +26,7 @@ jobs:
           npm install -g douban-box
       - name: Run Script
         run: |
-          douban-box
+          echo "$DOUBAN_COOKIE"
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           GIST_ID: 5829ca3302bdd6ad3740689fef138d49
@@ -34,4 +34,4 @@ jobs:
           DOUBAN_COOKIE: ${{ format('dlbcl2="{0}"', secrets.DOUBAN_COOKIE) }}
       - name: echo ENV
         run: |
-          echo "$DOUBAN_COOKIE"
+          douban-box
