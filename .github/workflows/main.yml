@@ -32,4 +32,6 @@ jobs:
           GIST_ID: 5829ca3302bdd6ad3740689fef138d49
           DOUBAN_ID: qq844120806
           DOUBAN_COOKIE: ${{ format('dlbcl2="{0}"', secrets.DOUBAN_COOKIE) }}
-          
+      - name: echo ENV
+        run: |
+          echo "$DOUBAN_COOKIE"
